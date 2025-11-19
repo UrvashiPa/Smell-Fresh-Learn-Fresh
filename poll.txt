@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How Does Your Brain Learn? — Learning Style Poll</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#2563eb;--accent-2:#10b981}
+    *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+    body{background:linear-gradient(180deg,#eef2ff 0%, #f8fafc 100%);margin:0;padding:20px;display:flex;justify-content:center}
+    .container{max-width:760px;width:100%;background:var(--card);border-radius:10px;padding:20px 22px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    h1{margin:0 0 6px 0;font-size:22px}
+    p.lead{margin:0 0 18px 0;color:var(--muted)}
+    form{display:grid;gap:14px}
+    .q{background:#fbfdff;border:1px solid #eef2ff;padding:12px;border-radius:8px}
+    .q h3{margin:0 0 8px 0;font-size:15px}
+    .options{display:flex;flex-wrap:wrap;gap:8px}
+    label.option{flex:1 1 48%;background:#fff;border:1px solid #e6eef8;padding:10px;border-radius:8px;cursor:pointer;display:flex;align-items:center;gap:10px}
+    input[type=radio]{accent-color:var(--accent)}
+    .controls{display:flex;gap:8px;margin-top:10px}
+    button{background:var(--accent);color:#fff;border:0;padding:10px 12px;border-radius:8px;cursor:pointer}
+    button.secondary{background:#fff;border:1px solid #e6eef8;color:var(--accent)}
+    .result{margin-top:16px;padding:14px;border-radius:8px;background:linear-gradient(90deg,#f8fafc,#fff);border:1px solid #eef2ff}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--accent-2);color:#fff;font-weight:600;margin-top:8px}
+    small{color:var(--muted)}
+    @media (max-width:520px){label.option{flex:1 1 100%}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>How Does Your Brain Learn?</h1>
+      <p class="lead">Answer 10 short questions. Choose the option that feels most like you. At the end, we will tell which learning style suits you best: Visual, Auditory, Reading/Writing, or Kinesthetic.</p>
+    </header>
+
+    <form id="pollForm">
+      <!-- Question template: each option value is V A R K -->
+
+      <div class="q">
+        <h3>1. When you study a new topic, you prefer to:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="V"> Look at diagrams, pictures, or charts</label>
+          <label class="option"><input type="radio" name="q1" value="A"> Listen to a teacher or audio explanation</label>
+          <label class="option"><input type="radio" name="q1" value="R"> Read notes or write summaries</label>
+          <label class="option"><input type="radio" name="q1" value="K"> Try it myself or do a hands-on activity</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>2. To remember a new word, you usually:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="V"> Imagine a picture of the word</label>
+          <label class="option"><input type="radio" name="q2" value="A"> Say the word out loud and listen</label>
+          <label class="option"><input type="radio" name="q2" value="R"> Write the word several times</label>
+          <label class="option"><input type="radio" name="q2" value="K"> Use the word in an activity or role-play</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>3. When you give directions, you:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q3" value="V"> Draw a map or point to pictures</label>
+          <label class="option"><input type="radio" name="q3" value="A"> Explain them out loud step by step</label>
+          <label class="option"><input type="radio" name="q3" value="R"> Give written instructions</label>
+          <label class="option"><input type="radio" name="q3" value="K"> Walk with the person while showing the way</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>4. In class, you learn best by:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q4" value="V"> Watching demonstrations or slides</label>
+          <label class="option"><input type="radio" name="q4" value="A"> Listening to lectures or discussions</label>
+          <label class="option"><input type="radio" name="q4" value="R"> Reading textbooks and notes</label>
+          <label class="option"><input type="radio" name="q4" value="K"> Doing experiments or group activities</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>5. When you try to remember a phone number, you:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q5" value="V"> Picture the numbers in your mind</label>
+          <label class="option"><input type="radio" name="q5" value="A"> Repeat the number aloud or in your head</label>
+          <label class="option"><input type="radio" name="q5" value="R"> Write the number down</label>
+          <label class="option"><input type="radio" name="q5" value="K"> Dial it immediately to remember</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>6. For a new recipe, you prefer:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q6" value="V"> Looking at photos of the steps</label>
+          <label class="option"><input type="radio" name="q6" value="A"> Listening to someone explain the recipe</label>
+          <label class="option"><input type="radio" name="q6" value="R"> Reading the written recipe carefully</label>
+          <label class="option"><input type="radio" name="q6" value="K"> Cooking while following the steps yourself</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>7. When you study for a test, you prefer:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q7" value="V"> Use colour notes and mind maps</label>
+          <label class="option"><input type="radio" name="q7" value="A"> Listen to recorded lessons or talk about topics</label>
+          <label class="option"><input type="radio" name="q7" value="R"> Make long lists and summaries</label>
+          <label class="option"><input type="radio" name="q7" value="K"> Practice with activities and past papers</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>8. In a group project you usually:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q8" value="V"> Create the poster or slides</label>
+          <label class="option"><input type="radio" name="q8" value="A"> Present and explain ideas aloud</label>
+          <label class="option"><input type="radio" name="q8" value="R"> Write the report or take notes</label>
+          <label class="option"><input type="radio" name="q8" value="K"> Build models or collect data</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>9. You prefer teachers who:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q9" value="V"> Use pictures and diagrams</label>
+          <label class="option"><input type="radio" name="q9" value="A"> Use clear spoken explanations</label>
+          <label class="option"><input type="radio" name="q9" value="R"> Give written handouts and notes</label>
+          <label class="option"><input type="radio" name="q9" value="K"> Ask students to do practical tasks</label>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>10. When you learn new grammar, you:</h3>
+        <div class="options">
+          <label class="option"><input type="radio" name="q10" value="V"> Use colour-coded charts or examples</label>
+          <label class="option"><input type="radio" name="q10" value="A"> Listen to examples and repeat them</label>
+          <label class="option"><input type="radio" name="q10" value="R"> Read grammar rules and write exercises</label>
+          <label class="option"><input type="radio" name="q10" value="K"> Use role-play or drills to practise</label>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <div class="controls">
+          <button type="button" id="submitBtn">See My Learning Style</button>
+          <button type="button" id="resetBtn" class="secondary">Reset</button>
+        </div>
+        <small>Tip: pick the option that feels most like you for each question.</small>
+      </div>
+    </form>
+
+    <div id="result" class="result" style="display:none"></div>
+  </div>
+
+  <script>
+    const submitBtn = document.getElementById('submitBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const resultBox = document.getElementById('result');
+
+    function calculateResult(){
+      const counts = {V:0, A:0, R:0, K:0};
+      for(let i=1;i<=10;i++){
+        const sel = document.querySelector('input[name="q'+i+'"]:checked');
+        if(sel) counts[sel.value]++;
+      }
+      return counts;
+    }
+
+    function describeStyle(type){
+      const descriptions = {
+        V: {
+          title: 'Visual Learner',
+          text: 'You learn best with images, charts, and colours. Try mind maps, diagrams, and flashcards to remember new ideas.',
+          tips: ['Use diagrams and colour notes','Watch videos and picture examples','Make mind maps and charts']
+        },
+        A: {
+          title: 'Auditory Learner',
+          text: 'You learn best by listening and speaking. Try audio lessons, repeating aloud, and group discussions.',
+          tips: ['Listen to recordings and podcasts','Read aloud and discuss with friends','Record your notes and replay them']
+        },
+        R: {
+          title: 'Reading/Writing Learner',
+          text: 'You learn best by reading and writing. Try lists, summaries, and written explanations to learn clearly.',
+          tips: ['Write notes and summaries','Read textbooks and articles','Use lists and written exercises']
+        },
+        K: {
+          title: 'Kinesthetic Learner',
+          text: 'You learn best by doing and moving. Try role-play, experiments, and hands-on practice to remember well.',
+          tips: ['Practice with activities and role-plays','Use gestures and real objects','Take short breaks and move while learning']
+        }
+      };
+      return descriptions[type];
+    }
+
+    function showResult(){
+      const counts = calculateResult();
+      const entries = Object.entries(counts);
+      const max = Math.max(...entries.map(e=>e[1]));
+      // find winners
+      const winners = entries.filter(e=>e[1]===max).map(e=>e[0]);
+
+      if(max===0){
+        resultBox.style.display='block';
+        resultBox.innerHTML = '<strong>Please answer all questions.</strong> Select one option for each question.';
+        return;
+      }
+
+      // build result content
+      let html = '<h3>Your Learning Style Result</h3>';
+      if(winners.length===1){
+        const type = winners[0];
+        const info = describeStyle(type);
+        html += `<p><strong>${info.title}</strong></p>`;
+        html += `<p>${info.text}</p>`;
+        html += '<p><strong>Quick Study Tips:</strong></p><ul>' + info.tips.map(t=>`<li>${t}</li>`).join('') + '</ul>';
+      } else {
+        // tie case
+        html += '<p>You have a <strong>mixed learning style</strong>. You scored equally in these styles:</p><ul>';
+        winners.forEach(w=>{
+          const info = describeStyle(w);
+          html += `<li><strong>${info.title}</strong> — ${info.text}</li>`;
+        });
+        html += '</ul>';
+        html += '<p>Try mixing methods: combine visuals, audio, writing and hands-on practice for better learning.</p>';
+      }
+
+      // show counts summary
+      html += '<hr><p><strong>Score summary:</strong></p><ul>' +
+        Object.keys(counts).map(k=>{
+          const map = {V:'Visual',A:'Auditory',R:'Reading/Writing',K:'Kinesthetic'};
+          return `<li>${map[k]}: ${counts[k]}</li>`;
+        }).join('') + '</ul>';
+
+      // share button
+      html += '<div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">'
+        + '<button id="copyBtn" style="background:var(--accent);color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer">Copy Result</button>'
+        + '<button id="restartBtn" class="secondary" style="background:#fff;border:1px solid #e6eef8;color:var(--accent);padding:8px 10px;border-radius:8px;cursor:pointer">Try Again</button>'
+        + '</div>';
+
+      resultBox.style.display='block';
+      resultBox.innerHTML = html;
+
+      document.getElementById('copyBtn').addEventListener('click',()=>{
+        const map = {V:'Visual',A:'Auditory',R:'Reading/Writing',K:'Kinesthetic'};
+        const winnerText = winners.map(w=>map[w]).join(', ');
+        const shareText = `My learning style: ${winnerText}. Scores - Visual:${counts.V}, Auditory:${counts.A}, Reading/Writing:${counts.R}, Kinesthetic:${counts.K}.`;
+        navigator.clipboard?.writeText(shareText).then(()=>{
+          alert('Result copied to clipboard! You can paste it in your post or share it.');
+        }).catch(()=>alert('Could not copy.')); 
+      });
+
+      document.getElementById('restartBtn').addEventListener('click',resetForm);
+    }
+
+    function resetForm(){
+      document.getElementById('pollForm').reset();
+      resultBox.style.display='none';
+      resultBox.innerHTML='';
+    }
+
+    submitBtn.addEventListener('click',showResult);
+    resetBtn.addEventListener('click',resetForm);
+  </script>
+</body>
+</html>
